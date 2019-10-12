@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Configuration>
+    <Properties>
+        <Property name="log-path">/var/log/fmw/app/base-framework</Property>
+    </Properties>
+    <Appenders>
+        <RollingFile name="my_log" fileName="${log-path}/base-framework.log"
+                     filePattern="${log-path}/base-framework-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout pattern="%d{dd/MMM/yyyy HH:mm:ss,SSS} %-5level %logger{36} - %msg%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="100000 KB" />
+            </Policies>
+            <DefaultRolloverStrategy max="10" />
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="my_log" />
+        </Root>
+        <logger name="com.example.demo" additivity="false">
+            <level value="INFO" />
+            <appender-ref ref="my_log" />
+        </logger>
+    </Loggers>
+</Configuration>
