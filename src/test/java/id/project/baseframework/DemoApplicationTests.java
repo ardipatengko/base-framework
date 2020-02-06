@@ -1,4 +1,4 @@
-package com.example.demo;
+package id.project.baseframework;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

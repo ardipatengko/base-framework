@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package id.project.baseframework.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

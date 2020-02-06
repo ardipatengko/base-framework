@@ -1,4 +1,4 @@
-package com.example.demo;
+package id.project.baseframework;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
